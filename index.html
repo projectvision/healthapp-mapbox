@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yabbit Clinician UI 2.0 Prototype</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div id="header" class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+
+        <div class='logo'>
+        <img src='img/logo-85cc87f4ea1768636ce72bcac97ee1f4.png' height=37px />
+      </div>
+        </div>
+        <nav class="collapse navbar-collapse">
+
+
+            <ul class="pull-right navbar-nav nav">
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/user.png" height=37px /></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#">Logout</a></li>
+                  </ul>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+    <div id="wrapper">
+      <div id="sidebar-wrapper" class="col-md-1">
+                <div id="sidebar">
+                    <div class="list-group">
+    						 <a href="#" class="list-group-item active"><span class="badge">3</span>Current Patient</a>
+    						<div class="list-group-item">
+    							Other Patient
+    						</div>
+                <div class="list-group-item">
+    							Other Patient
+    						</div>
+                <div class="list-group-item">
+    							Other Patient
+    						</div>
+                <!-- <a class="list-group-item active"><span class="badge">14</span>Help</a> -->
+    					</div>
+                </div>
+            </div>
+            <div id="main-wrapper" class="col-md-11 pull-right">
+                <div id="main">
+                  <div class="page-header">
+<div id="alerts">
+  <div id="panel-alert" class="panel panel-default">
+   <div class="panel-heading">Alerts</div>
+   <div class="panel-body">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          #
+        </th>
+        <th>
+          Alert Type
+        </th>
+        <th>
+          Alert Date
+        </th>
+        <th>
+          Action
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="danger">
+        <td>
+          1
+        </td>
+        <td>
+          Decreased Activity Level
+        </td>
+        <td>
+          02/04/2017
+        </td>
+        <td>
+          <div class="btn-group">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    Action
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Resolved</a></li>
+    <li><a href="#">Refer to Provider</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Monitor</a></li>
+  </ul>
+</div>
+        </td>
+      </tr>
+      <tr class="danger">
+        <td>
+          2
+        </td>
+        <td>
+          Low Stress Challenge Completion
+        </td>
+        <td>
+          02/08/2017
+        </td>
+        <td>
+          <div class="btn-group">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    Action
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Resolved</a></li>
+    <li><a href="#">Refer to Provider</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Monitor</a></li>
+  </ul>
+</div>
+        </td>
+      </tr>
+      <tr class="danger">
+        <td>
+          3
+        </td>
+        <td>
+          Increased NIMBY Risk
+        </td>
+        <td>
+          02/11/2017
+        </td>
+        <td>
+          <div class="btn-group">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    Action
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Resolved</a></li>
+    <li><a href="#">Refer to Provider</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Monitor</a></li>
+  </ul>
+</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+</div>
+
+                    <div id="panels">
+<div id="panel1" class="panel panel-default">
+ <div class="panel-heading">Challenge Completion</div>
+ <div class="panel-body">
+<div class="progress">
+  <span>Fitness 90%</span>
+  <div class="progress-bar" role="progressbar" style="width: 90%;">
+
+  </div>
+</div>
+   <div class="progress">
+     <span>Diet 60%</span>
+  <div class="progress-bar" role="progressbar" style="width: 60%;">
+
+  </div>
+</div>
+   <div class="progress">
+     <span>Stress 20%</span>
+  <div class="progress-bar" role="progressbar" style="width: 20%;">
+
+  </div>
+</div>
+  </div>
+ </div>
+
+<div id="panel2" class="panel panel-default">
+ <div class="panel-heading">Health Risk</div>
+ <div class="panel-body">Low Risk</div>
+ </div>
+
+<div id="panel3" class="panel panel-default">
+ <div class="panel-heading">Activity Level</div>
+ <div class="panel-body">Active</div>
+ </div>
+</div>
+                  </div>
+                  <div id='map-container'>
+                  <div id="panel-risk" class="panel panel-default">
+                  <div class="panel-heading" style="width:100%;">Geolocation</div>
+                  <div class="panel-body">
+                <div id='map'></div></div></div>
+                </div>
+                  <div id="main-sub1">
+
+                    <div id="panel-risk" class="panel panel-default">
+                     <div class="panel-heading" style="width:100%;">Behavioral Risk</div>
+                     <div class="panel-body">
+                       <div class="progress">
+                         <span>Overall Risk</span>
+                       <div class="progress-bar" role="progressbar" style="width: 45%;" color="green">
+                       </div></div></div>
+
+
+                       <div class="panel-heading" style="width:100%;">Breakdown of Risk Factors</div>
+                       <div class="panel-body">
+                         <div class="progress">
+                           <span>Air Pollution</span>
+                         <div class="progress-bar" role="progressbar" style="width: 60%;" color="green">
+                         </div>
+                       </div>
+
+                       <div class="progress">
+                         <span>Violent Crime Rate</span>
+                       <div class="progress-bar" role="progressbar" style="width: 40%;" color="green">
+                       </div>
+                       </div>
+
+                       <div class="progress">
+                         <span>Healthy Food Options</span>
+                       <div class="progress-bar" role="progressbar" style="width: 10%;" color="green">
+                       </div>
+                       </div>
+
+                       <div class="progress">
+                         <span>Unhealthy Food Options</span>
+                       <div class="progress-bar" role="progressbar" style="width: 40%;" color="green">
+                       </div>
+                     </div>
+
+                     <div class="progress">
+                       <span>Exposure to YIMBY</span>
+                     <div class="progress-bar" role="progressbar" style="width: 20%;" color="green">
+                     </div>
+                   </div>
+
+                   <div class="progress">
+                     <span>Exposure to NIMBY</span>
+                   <div class="progress-bar" role="progressbar" style="width: 50%;" color="green">
+                   </div>
+                 </div>
+
+                 <div class="progress">
+                   <span>Local School Quality</span>
+                 <div class="progress-bar" role="progressbar" style="width: 30%;" color="green">
+                 </div>
+               </div>
+
+               <div class="progress">
+                 <span>Local Health Provider Quality</span>
+               <div class="progress-bar" role="progressbar" style="width: 60%;" color="green">
+               </div>
+             </div>
+
+             <div class="progress">
+               <span>Financial</span>
+             <div class="progress-bar" role="progressbar" style="width: 70%;" color="green">
+             </div>
+           </div>
+
+
+                     </div>
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div id='hrv'>
+                  <div id="panel-risk" class="panel panel-default">
+                  <div class="panel-heading" style="width:100%;">Detailed Activity and Stress Response Data</div>
+                  <div class="panel-body">
+                  <img src="data/hrv3.png" width="90%">
+                </div>
+                </div>
+                </div>
+            </div>
+
+    </div>
+    <script>
+        //see if we can't embed a custom map with custom baselayer.  That way, we can superimpose demographic data onto the baselayer without having to load geojson on the fly
+        L.mapbox.accessToken = 'pk.eyJ1IjoicHJvamVjdHZpc2lvbiIsImEiOiJjaW9oemp2cHIwMDdndTVtMXExNnVmYjRpIn0.tiTBE_yeHHEB1qF1TnPZvA';
+        var map = L.mapbox.map('map', 'mapbox.streets')
+            .setView([38, -90], 3);
+
+        var featLayer = L.mapbox.featureLayer().addTo(map);
+        //Add layer with just the user movement data.  Consider clustering markers, rather than heat map https://www.mapbox.com/help/markers/#more-clustering
+        featLayer.loadURL('data/stations.geojson');
+
+
+        </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

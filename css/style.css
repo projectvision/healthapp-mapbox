@@ -1,0 +1,181 @@
+# Empty CSS file for your own CSS
+@import url("reset.css");
+
+body {
+    padding-top: 50px;
+    overflow: hidden;
+}
+
+#header {
+  background: #4EC6E6;
+  padding-right: 120px;
+}
+
+#wrapper {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    display: inline-block;
+}
+#main-wrapper {
+    height: 100%;
+    overflow-y: auto;
+    padding: 50px 0 0px 0;
+    width: 80%;
+    position: float;
+}
+#main {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 15px;
+}
+#sidebar-wrapper {
+    height: 100%;
+    padding: 50px 0 0px 0;
+    position: float;
+    border-right: 1px solid gray;
+    width: 20%;
+}
+#sidebar {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    margin-top: 20px;
+
+}
+#sidebar .list-group-item {
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+}
+@media (max-width: 992px) {
+    body {
+        padding-top: 0px;
+    }
+}
+@media (min-width: 992px) {
+    #main-wrapper {
+        float:right;
+    }
+}
+@media (max-width: 992px) {
+    #main-wrapper {
+        padding-top: 0px;
+    }
+}
+@media (max-width: 992px) {
+    #sidebar-wrapper {
+        position: static;
+        height:auto;
+        max-height: 300px;
+  		border-right:0;
+	}
+}
+#alerts {
+  width:100%;
+  float:left;
+}
+
+#panel-alert {
+  width:100%;
+}
+
+#map-container {
+  height: 100%;
+  width: 50%;
+  float:left;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  margin-bottom:10px;
+  border:1px;
+  border-color:#000;
+  }
+
+#main-sub1 {
+  width: 50%;
+  float:left;
+  border:1px;
+  border-color:#000;
+  height:100%;
+}
+
+
+#map {
+  /*position:absolute;*/
+  top:0;
+  bottom:0;
+  width:100%;
+  height:500px;
+}
+
+#panels{
+  width:100%;
+  position:relative;
+  margin-top:1px;
+}
+
+#panel-risk{
+  width:100%;
+}
+
+#panel1 {
+  float:left;
+  height:150px;
+  width:33%;
+}
+
+#panel1 .progress {
+  margin-bottom:1px;
+}
+
+#panel3 {
+  float:left;
+  height:150px;
+  width:34%;
+}
+
+#panel2 {
+  float:left;
+  height:150px;
+  width:33%;
+}
+
+#hrv {
+  width:100%;
+  float:left;
+  margin-top: 30px;
+}
+
+
+  html, body {
+    height: 100%;
+  }
+  body {
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      color:#333
+  }
+
+.logo img{
+  margin-top:15px;
+  margin-left: 25px;
+  border:2px solid #fff;
+  border-radius:3px;
+}
+
+.progress {
+    position: relative;
+}
+
+.progress span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    color: black;
+    margin-left: 5px;
+ }
